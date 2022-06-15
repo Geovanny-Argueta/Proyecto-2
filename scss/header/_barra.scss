@@ -1,0 +1,23 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+.barra{
+    display: flex;
+    flex-direction: column;
+
+    @include m.tablets { 
+        flex-direction:row;
+        justify-content:space-between;
+        align-items: center;
+    }
+
+    .logo{
+        width: 50%;
+        margin: 0 auto;
+
+        @include m.tablets { 
+            width:20rem;
+            margin:0;
+        }
+    }
+}
